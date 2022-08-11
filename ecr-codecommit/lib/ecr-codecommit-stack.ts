@@ -1,6 +1,5 @@
 import { Construct } from 'constructs';
-import * as cdk from 'aws-cdk-lib';
-import { Stack, StackProps, CfnOutput, Tags } from 'aws-cdk-lib';
+import { Stack, CfnOutput, Tags } from 'aws-cdk-lib';
 import * as path from 'path';
 import * as codecommit from 'aws-cdk-lib/aws-codecommit';
 import * as ssm from 'aws-cdk-lib/aws-ssm';
@@ -8,8 +7,7 @@ import * as ecr from 'aws-cdk-lib/aws-ecr';
 import * as assets from 'aws-cdk-lib/aws-ecr-assets';
 import * as ecrdeploy from 'cdk-ecr-deployment';
 
-import { SSM_PREFIX } from '../../config';
-import { StackCommonProps } from '../../config';
+import { StackCommonProps, SSM_PREFIX } from '../../config';
 
 export interface EcrStackProps extends StackCommonProps {
     serviceName: string;

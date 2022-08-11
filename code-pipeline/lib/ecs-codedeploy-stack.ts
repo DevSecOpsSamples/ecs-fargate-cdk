@@ -1,4 +1,4 @@
-import { Stack, StackProps, CfnOutput, Tags } from 'aws-cdk-lib';
+import { Stack, StackProps } from 'aws-cdk-lib';
 import * as cdk from 'aws-cdk-lib';
 import * as ssm from 'aws-cdk-lib/aws-ssm';
 
@@ -104,12 +104,6 @@ export class EcsCodeDeployStack extends Stack {
             output: sourceOutput
         });
 
-        // const sourceAction = new codepipeline_actions.CodeCommitSourceAction({
-        //     // account: props?.env?.account,
-        //     actionName: 'CodeCommit',
-        //     repository: repository,
-        //     output: sourceOutput,
-        // });
         const buildAction = new codepipeline_actions.CodeBuildAction({
             actionName: 'CodeBuild',
             project,
@@ -125,7 +119,7 @@ export class EcsCodeDeployStack extends Stack {
             imageFile: new codepipeline.ArtifactPath(buildOutput, `imagedefinitions.json`)
         });
 
-        const ecsPipeline = new codepipeline.Pipeline(this, 'ecs-deploy-pipeline', {
+        new codepipeline.Pipeline(this, 'ecs-deploy-pipeline', {
             pipelineName: `ecs-deploy-${service.serviceName}`,
             stages: [
                 {
