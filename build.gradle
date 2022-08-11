@@ -23,14 +23,13 @@ sonarqube {
         property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.sourceEncoding", "UTF-8"
         property "sonar.sources", "."
-        // property "sonar.java.binaries", "./app/build/classes"
         property "sonar.exclusions", "**/node_modules/**, **/cdk.out/**, **/*.java"
+        property "sonar.inclusions", "**/Dockerfile,**/Jenkinsfile*"
         property "sonar.cpd.exclusions", "**/*index.ts"
         property "sonar.issue.ignore.multicriteria", "e1"
         property "sonar.issue.ignore.multicriteria.e1.ruleKey", "typescript:S1848"
         property "sonar.issue.ignore.multicriteria.e1.resourceKey", "**/*.ts"
         property "sonar.links.ci", "https://github.com/engel80/ecs-fargate-cdk"
-        // https://sonarcloud.io/project/overview?id=ContainerOnAWS_ecs-fargate-cdk
         property "sonar.log.level", "DEBUG"
     }
 }
