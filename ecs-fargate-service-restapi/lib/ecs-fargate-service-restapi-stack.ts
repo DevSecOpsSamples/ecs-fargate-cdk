@@ -1,7 +1,6 @@
 import { Construct } from 'constructs';
 import * as cdk from 'aws-cdk-lib';
 import { Stack, CfnOutput, Duration, Tags } from 'aws-cdk-lib';
-import * as path from 'path';
 import * as ecs from 'aws-cdk-lib/aws-ecs';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as elbv2 from 'aws-cdk-lib/aws-elasticloadbalancingv2';
@@ -51,6 +50,7 @@ export class FargateRestAPIServiceStack extends Stack {
             containerName,
             image: ecs.ContainerImage.fromRegistry(regUrl),
             // or build with /app folder asset
+            // import * as path from 'path';
             // image: ecs.ContainerImage.fromAsset(path.join(__dirname, "../../", "app")),
             cpu: 1024,
             memoryReservationMiB: 2048
