@@ -104,12 +104,6 @@ export class EcsCodeDeployStack extends Stack {
             output: sourceOutput
         });
 
-        // const sourceAction = new codepipeline_actions.CodeCommitSourceAction({
-        //     // account: props?.env?.account,
-        //     actionName: 'CodeCommit',
-        //     repository: repository,
-        //     output: sourceOutput,
-        // });
         const buildAction = new codepipeline_actions.CodeBuildAction({
             actionName: 'CodeBuild',
             project,
