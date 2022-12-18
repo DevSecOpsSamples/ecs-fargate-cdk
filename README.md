@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this sample project, we will learn major features of ECS Fargate and Fargate Spot.
+In this sample project, we will learn major features of ECS Fargate/Fargate Spot and deployment with AWS Code Pipeline.
 
 ![Architecture](./screenshots/fargate-architecture.png?raw=true)
 
