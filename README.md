@@ -1,10 +1,10 @@
-# Sample project for ECS Fargate with CDK
+# ECS Fargate with CDK
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ContainerOnAWS_ecs-fargate-cdk&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ContainerOnAWS_ecs-fargate-cdk) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ContainerOnAWS_ecs-fargate-cdk&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=ContainerOnAWS_ecs-fargate-cdk)
+[![Build](https://github.com/DevSecOpsSamples/ecs-fargate-cdk/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/DevSecOpsSamples/ecs-fargate-cdk/actions/workflows/build.yml) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DevSecOpsSamples_ecs-fargate-cdk&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DevSecOpsSamples_ecs-fargate-cdk) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=DevSecOpsSamples_ecs-fargate-cdk&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=DevSecOpsSamples_ecs-fargate-cdk)
 
-## Introduction
+## Overview
 
-In this sample project, we will learn major features of ECS Fargate and Fargate Spot.
+In this sample project, we will learn major features of ECS Fargate/Fargate Spot and deployment with AWS Code Pipeline.
 
 ![Architecture](./screenshots/fargate-architecture.png?raw=true)
 
@@ -363,13 +363,13 @@ SSM parameters:
 
 ### CDK Lib
 
-* [ECS](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ecs-readme.html)
+* [aws-cdk-lib.aws_ecs module](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ecs-readme.html)
 
-* [ECR Assets](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ecr_assets-readme.html)
+* [aws-cdk-lib.aws_ecr_assets module](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ecr_assets-readme.html)
 
-* [IAM](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_iam-readme.html)
+* [aws-cdk-lib.aws_iam module](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_iam-readme.html)
 
-* [SSM](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ssm-readme.html)
+* [aws-cdk-lib.aws_ssm module](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ssm-readme.html)
 
 ### IAM Role & Policy
 
