@@ -7,7 +7,28 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  build:
+  cdk-build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 18 ]
+    name: Node ${{ matrix.node }} sample
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install && npm run build
+
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: cd app && docker build . -t eks-cdk:$(date +%s)
+  
+  sonarqube:
     name: Build
     runs-on: ubuntu-latest
     steps:

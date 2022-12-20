@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.INSTANCE_TYPE = exports.CLUSTER_NAME = void 0;
+exports.CLUSTER_NAME = 'fargate';
+exports.INSTANCE_TYPE = 'c5.xlarge';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2x1c3Rlci1jb25maWcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9lY3MtZmFyZ2F0ZS1jbHVzdGVyL2xpYi9jbHVzdGVyLWNvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBRWEsUUFBQSxZQUFZLEdBQUcsU0FBUyxDQUFDO0FBRXpCLFFBQUEsYUFBYSxHQUFHLFdBQVcsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIiMhL3Vzci9iaW4vZW52IG5vZGVcblxuZXhwb3J0IGNvbnN0IENMVVNURVJfTkFNRSA9ICdmYXJnYXRlJztcblxuZXhwb3J0IGNvbnN0IElOU1RBTkNFX1RZUEUgPSAnYzUueGxhcmdlJztcbiJdfQ==
